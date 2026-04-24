@@ -1,3 +1,19 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+@theme {
+	--color-accent: #2337ff;
+	--color-accent-dark: #000d8a;
+	--color-site-black: rgb(15 18 25);
+	--color-site-gray: rgb(96 115 159);
+	--color-site-gray-light: rgb(229 233 240);
+	--color-site-gray-dark: rgb(34 41 57);
+
+	--font-sans: 'Inter Variable', sans-serif;
+	--font-mono: 'JetBrains Mono Variable', monospace;
+}
+
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
@@ -17,7 +33,7 @@
 		0 16px 32px rgba(var(--gray), 33%);
 }
 body {
-	font-family: var(--font-atkinson);
+	font-family: var(--font-sans);
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -95,10 +111,12 @@ code {
 	padding: 2px 5px;
 	background-color: rgb(var(--gray-light));
 	border-radius: 2px;
+	font-family: var(--font-mono);
 }
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
+	font-family: var(--font-mono);
 }
 pre > code {
 	all: unset;

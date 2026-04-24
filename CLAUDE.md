@@ -27,6 +27,21 @@ This is an **Astro 6** blog site using the default blog starter template.
 
 **Integrations**: MDX (`@astrojs/mdx`) for `.mdx` posts, sitemap auto-generation (`@astrojs/sitemap`), and RSS feed at `/rss.xml`. The `site` URL in `astro.config.mjs` must be updated from `https://example.com` before deploying.
 
-**Fonts**: Atkinson Hyperlegible served locally from `src/assets/fonts/`, exposed via CSS variable `--font-atkinson`.
+**Fonts**: Atkinson Hyperlegible served locally from `src/assets/fonts/`, exposed via CSS variable `--font-atkinson` (Astro Font component in `BaseHead.astro`). Inter Variable (`--font-sans`) is the body font; JetBrains Mono Variable (`--font-mono`) is used for code — both served from `node_modules` via `@fontsource-variable`.
 
 **Styles**: Global styles in `src/styles/global.css`. Component-scoped styles are written inline within each `.astro` file's `<style>` block.
+
+**Tailwind**: Tailwind CSS v4 via `@tailwindcss/vite` (no `tailwind.config.*` file — configuration lives entirely in `global.css`). Design tokens are defined in the `@theme {}` block at the top of `global.css`:
+
+| Token | Value | Tailwind utility |
+|---|---|---|
+| `--color-accent` | `#2337ff` | `text-accent`, `bg-accent` |
+| `--color-accent-dark` | `#000d8a` | `text-accent-dark`, `bg-accent-dark` |
+| `--color-site-black` | `rgb(15 18 25)` | `text-site-black` |
+| `--color-site-gray` | `rgb(96 115 159)` | `text-site-gray` |
+| `--color-site-gray-light` | `rgb(229 233 240)` | `bg-site-gray-light` |
+| `--color-site-gray-dark` | `rgb(34 41 57)` | `text-site-gray-dark` |
+| `--font-sans` | Inter Variable | `font-sans` |
+| `--font-mono` | JetBrains Mono Variable | `font-mono` |
+
+The legacy `:root` variables (`--accent`, `--gray`, `--black`, etc.) are kept for backward-compat with existing component styles that use `rgb(var(--gray))` patterns.
