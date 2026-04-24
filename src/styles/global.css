@@ -9,6 +9,8 @@
 	--color-site-gray: rgb(96 115 159);
 	--color-site-gray-light: rgb(229 233 240);
 	--color-site-gray-dark: rgb(34 41 57);
+	--color-site-bg: #fafaf8;
+	--color-site-text: #1a1a1a;
 
 	--font-sans: 'Inter Variable', sans-serif;
 	--font-mono: 'JetBrains Mono Variable', monospace;
@@ -37,11 +39,10 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background-color: var(--color-site-bg);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: var(--color-site-text);
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -58,6 +59,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
+	font-family: var(--font-mono);
 	color: rgb(var(--black));
 	line-height: 1.2;
 }

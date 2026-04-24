@@ -41,6 +41,8 @@ This is an **Astro 6** blog site using the default blog starter template.
 | `--color-site-gray` | `rgb(96 115 159)` | `text-site-gray` |
 | `--color-site-gray-light` | `rgb(229 233 240)` | `bg-site-gray-light` |
 | `--color-site-gray-dark` | `rgb(34 41 57)` | `text-site-gray-dark` |
+| `--color-site-bg` | `#fafaf8` | `bg-site-bg` |
+| `--color-site-text` | `#1a1a1a` | `text-site-text` |
 | `--font-sans` | Inter Variable | `font-sans` |
 | `--font-mono` | JetBrains Mono Variable | `font-mono` |
 
